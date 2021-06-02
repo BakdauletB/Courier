@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="kz.pillikan.courier.content.splash.SplashFragment"
+        android:label="SplashFragment">
+        <action
+            android:id="@+id/action_splashFragment_to_authorizationFragment"
+            app:destination="@id/authorizationFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_ordersFragment"
+            app:destination="@id/ordersFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/authorizationFragment"
+        android:name="kz.pillikan.courier.content.authorization.view.AuthorizationFragment"
+        android:label="AuthorizationFragment">
+        <action
+            android:id="@+id/action_authorizationFragment_to_ordersFragment"
+            app:destination="@id/ordersFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ordersFragment"
+        android:name="kz.pillikan.courier.content.orders.view.OrdersFragment"
+        android:label="OrdersFragment" >
+        <action
+            android:id="@+id/action_ordersFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_ordersFragment_to_arrivedFragment"
+            app:destination="@id/arrivedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="kz.pillikan.courier.content.profile.view.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_earningsFragment"
+            app:destination="@id/earningsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/earningsFragment"
+        android:name="kz.pillikan.courier.content.profile.view.EarningsFragment"
+        android:label="EarningsFragment" >
+        <action
+            android:id="@+id/action_earningsFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/arrivedFragment"
+        android:name="kz.pillikan.courier.content.orders.view.DetailPageFragment"
+        android:label="ArrivedFragment" >
+        <action
+            android:id="@+id/action_arrivedFragment_to_addPhotoFragment"
+            app:destination="@id/addPhotoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addPhotoFragment"
+        android:name="kz.pillikan.courier.content.orders.view.CancelOrderFragment"
+        android:label="AddPhotoFragment" />
+
+</navigation>

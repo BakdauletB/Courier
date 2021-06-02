@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:showAsAction="always">
+
+    <item
+        android:id="@+id/action_add_contact"
+        android:icon="@drawable/ic_rb_pause"
+        android:title="@string/pause"
+        app:showAsAction="ifRoom|withText" />
+
+    <item
+        android:id="@+id/action_settings"
+        android:icon="@drawable/ic_rb_complete"
+        android:title="@string/finish"
+        app:showAsAction="ifRoom|withText" />
+
+</menu>
