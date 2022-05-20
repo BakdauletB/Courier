@@ -34,4 +34,18 @@ open class BaseFragment(private val resource: Int) : Fragment() {
             }
         }?.show()
     }
+
+    fun arraysInDialog(navDirections: Int){
+       requireActivity().findNavController(R.id.container)
+           .navigate(navDirections)
+    }
+
+    fun errorDialog(errorMsg: Int){
+        activity?.alert {
+            title = getString(R.string.retail_name)
+            message = errorMsg
+            isCancelable = true
+            positivr("")
+        }
+    }
 }
